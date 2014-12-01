@@ -1,0 +1,26 @@
+<!html>
+<html ng-app="myApp">
+<head>
+  <meta charset="utf-8">
+  <title>Angular Demo</title>
+</head>
+<body>
+  <div ng-controller="meetupsController">
+    <p>There are {{meetups.length}} meetups</p>
+    <ul>
+      <li ng-repeat="meetup in meetups">
+        {{meetup.name}}
+      </li>
+    </ul>
+    <form ng-submit="creatMeetup()">
+      <input type="text" ng-model="meetupName"></input>
+      <button type="submit">Add</button>
+    </form>
+  </div>
+  <script type="text/javascript" src="/js/angular.min.js"></script>
+  <script type="text/javascript" src="/js/angular-resource.min.js"></script>
+  <script type="text/javascript" src="app.js"></script>
+   <script type="text/javascript" src="/client/controller/meetups_controller.js"></script>
+  
+</body>
+</html>
